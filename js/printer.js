@@ -1,4 +1,4 @@
-var stationNames [
+var stationNames = [
   'Altrincham',
   'Navigation Road',
   'Timperley',
@@ -34,3 +34,13 @@ var stations = $.each(stationNames, function (StationIndex, stationName) {
 })
 
 var tram = new tram(altrinchamToAshtonUnderLyne, altrinchamToAshtonUnderLyne.getStations()[0])
+
+$.each(altrinchamToAshtonUnderLyne.getStations(), function(stationIndex, station){
+  var stationHTML = '<div class = "station">'
+  stationHTML += '<div class = "circle"></div>'
+  stationHTML += '<div class = "name">' + station.getName() + '</div>'
+  stationHTML += '</div>'
+  
+  $('#stations').append(stationHTML)
+})
+
