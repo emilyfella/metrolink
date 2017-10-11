@@ -29,5 +29,10 @@ Tram.prototype = {
 
     this._currentStation = routeStations[nextStationIndex]
     return (routeAnnouncement + arrivingAt)
+  },
+
+  reset: function() {
+    this._currentStation = this._route.getStations()[0]
   }
+  
 }
